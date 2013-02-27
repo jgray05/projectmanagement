@@ -23,7 +23,10 @@
 <div id="navigation">
 
 <% if current_user %>
+	<%= link_to "Home", root_path %>
 	<%= link_to "Edit Profile", edit_user_path(:current) %>
+	<%= link_to "Repair Request", repair_requests_path %>
+	<%= link_to "Leases", leases_path %>
 	<%= link_to "Logout", logout_path %>
 <% else %>
 	<%= link_to "Register", new_user_path %>

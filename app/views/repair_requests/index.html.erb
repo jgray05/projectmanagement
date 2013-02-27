@@ -21,9 +21,19 @@
     <td><%= repair_request.request_response %></td>
     <td><%= repair_request.submitter_id %></td>
     <td><%= repair_request.responder_id %></td>
+
+    <% if can? :read, repair_request %>
     <td><%= link_to 'Show', repair_request %></td>
+    <% end %>
+    
+    <% if can? :manage, repair_request %>
     <td><%= link_to 'Edit', edit_repair_request_path(repair_request) %></td>
+    <% end %>
+    
+    <% if can? :manage, repair_request %>
     <td><%= link_to 'Destroy', repair_request, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
+
   </tr>
 <% end %>
 </table>

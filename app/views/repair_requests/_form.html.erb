@@ -11,10 +11,13 @@
     </div>
   <% end %>
 
+  <% if current_user && (current_user.has_role? :renter) %>
   <div class="field">
     <%= f.label :open_date %><br />
     <%= f.date_select :open_date %>
   </div>
+  <% end %>
+  
   <div class="field">
     <%= f.label :close_date %><br />
     <%= f.date_select :close_date %>

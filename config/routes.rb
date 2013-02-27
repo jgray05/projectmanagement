@@ -1,4 +1,6 @@
 Projectmanagement::Application.routes.draw do
+  resources :roles
+
   resources :repair_requests
 
   resources :leases

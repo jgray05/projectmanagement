@@ -11,8 +11,10 @@
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
+  <b>User is in Roles:</b>
+  <% @user.roles.each do |r| %>
+  	<li><%= r.name %></li>
+  <% end %>
 </p>
 
 
